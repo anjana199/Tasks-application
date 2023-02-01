@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" [formGroup]="taskform" (ngSubmit)="createtask()">
+                <div class="mb-3">
+                    <input type="text" name="" id="" placeholder="enter taskname" class="form-control" formControlName="task_name">
+                    <div class="form-text text-danger" *ngIf="task_name?.touched && task_name?.invalid" >invalid taskname</div>
+                    <button type="submit" [disabled]="taskform.invalid">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
